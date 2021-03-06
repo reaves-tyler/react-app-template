@@ -1,0 +1,22 @@
+.rowNoPaddingBottom {
+    padding-bottom: 0rem !important;
+}
+
+.rowNoPaddingTop {
+    padding-top: 0rem !important;
+}
+
+.rowMinimalPaddingTop {
+    padding-top: 0.15rem !important;
+}
+
+.rowMinimalPaddingBottom {
+    padding-bottom: 0.15rem !important;
+}
+
+strong[required]:after {
+    position: absolute;
+    content: '*';
+    margin: -0.2em 0 0 0.2em;
+    color: #db2828;
+}
