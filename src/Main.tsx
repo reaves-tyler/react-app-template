@@ -1,24 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../node_modules/semantic-ui-css/semantic.min.css';
 import './Main.css';
-import { Button, Container, Grid } from 'semantic-ui-react';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { Button, ChakraProvider } from '@chakra-ui/react';
 
 const Main: React.FC = () => {
     return (
-        <Container>
-            <Button color='orange'>My-App</Button>
-        </Container>
+        <><Button colorScheme="blue">Button</Button><Button colorScheme="green">Button</Button><Button colorScheme="orange">Button</Button><Button colorScheme="red">Button</Button><Button colorScheme="purple">Button</Button>
+            <Button colorScheme="yellow">Button</Button></>
     );
 };
 
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter>
+        
+        <ChakraProvider>
             <Main />
+            </ChakraProvider>
         </BrowserRouter>
     </Provider>,
     document.getElementById('app')
